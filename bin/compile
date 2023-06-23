@@ -80,6 +80,8 @@ fi
 step "Configuring the ${KC_DB} vendor"
 "${KEYCLOAK_PATH}/bin/kc.sh" build --db ${KC_DB}
 
+cp ${buildpack}/../cache-ispn.xml ${KEYCLOAK_PATH}/conf/
+
 step "Cleaning up tmp files"
 rm -rf "${TMP_PATH}"
 
